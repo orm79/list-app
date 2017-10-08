@@ -1,0 +1,13 @@
+.center {
+  text-align: center;
+}
+
+table td {
+  font-size: 1.7rem;
+  line-height: 1.7rem;
+}
+
+.panel-heading h4 {
+  font-weight: bold;
+  letter-spacing: .04rem;
+}

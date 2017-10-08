@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *"
+  />
+  <!-- Good default declaration:
+  * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+  * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+  * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+      * Enable inline JS: add 'unsafe-inline' to default-src
+      * Enable eval(): add 'unsafe-eval' to default-src
+  * Create your own at http://cspisawesome.com
+  -->
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *"> -->
+  
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <title>simpList</title>
+</head>
+
+<body>
+  <div class="app container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 center">
+        <h1>simpList</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12">
+        <input type="text" class="form-control input-lg" name="text-input"
+         id="textInput" placeholder="Add an item to list ...">
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4>YOUR LIST</h4>
+          </div>
+          <ul class="list-group">
+            <li class="list-group-item clearfix">Testar lite hära afasfa saf asfdads adsf asdf asfd asf asfd asdf asf asdfasdf  <button class="btn btn-warning pull-right">DEL</button></li>
+            <li class="list-group-item">Testar lite hära</li>
+            <li class="list-group-item">Testar lite hära</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script type="text/javascript" src="cordova.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+
+  <script type="text/javascript">
+    app.initialize();
+   </script>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
