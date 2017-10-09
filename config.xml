@@ -11,12 +11,12 @@
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
     <platform name="android">
-        <icon density="ldpi" src="www/res/icon/android/ldpi-icon.png" />
-        <icon density="mdpi" src="www/res/icon/android/mdpi-icon.png" />
-        <icon density="hdpi" src="www/res/icon/android/hdpi-icon.png" />
-        <icon density="xhdpi" src="www/res/icon/android/xhdpi-icon.png" />
-        <icon density="xxhdpi" src="www/res/icon/android/xxhdpi-icon.png" />
-        <icon density="xxxhdpi" src="www/res/icon/android/xxxhdpi-icon.png" />
+        <icon density="ldpi" src="www/res/icon/android/ldpi.png" />
+        <icon density="mdpi" src="www/res/icon/android/mdpi.png" />
+        <icon density="hdpi" src="www/res/icon/android/hdpi.png" />
+        <icon density="xhdpi" src="www/res/icon/android/xhdpi.png" />
+        <icon density="xxhdpi" src="www/res/icon/android/xxhdpi.png" />
+        <icon density="xxxhdpi" src="www/res/icon/android/xxxhdpi.png" />
         <splash density="port-ldpi" src="www/res/screen/android/splash-port-ldpi-screen.png" />
         <splash density="port-mdpi" src="www/res/screen/android/splash-port-mdpi-screen.png" />
         <splash density="port-hdpi" src="www/res/screen/android/splash-port-hdpi-screen.png" />

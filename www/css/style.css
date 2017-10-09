@@ -11,3 +11,14 @@ table td {
   font-weight: bold;
   letter-spacing: .04rem;
 }
+
+ul li {
+  margin-bottom: 5px !important;
+  color: #212121 !important;
+  font-size: 1.1em !important;
+  line-height: 1.5 !important;
+}
+
+ul li.done {
+  text-decoration: line-through!important;
+}
