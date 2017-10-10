@@ -1,3 +1,5 @@
+// By: Daniel Olsson <orol1600@student.miun.se>
+
 simplist = {
 
   set: function() {
@@ -5,15 +7,12 @@ simplist = {
     var inputText = document.getElementById('textField').value;
     var itemList = simplist.get();
     
-    listObj = {
-      content: inputText,
-      done: false
-    }
+    var myList = [];
     
     //check that input is not empty
     if ( inputText.length > 0 ) {
       //push new inputText into itemList array
-      itemList.push(listObj);
+      itemList.push(inputText);
       //stringify itemList array and store in localStorage as storedList
       localStorage.setItem('storedList', JSON.stringify(itemList));
     }
@@ -31,6 +30,7 @@ simplist = {
     
     //create empty array
     var itemList = [];
+    
     //get stored list from localStorage
     itemListStr = localStorage.getItem('storedList');
     
@@ -43,21 +43,47 @@ simplist = {
     return itemList;
   },
 
+  del: function() {
+    
+    //get the itemlist via get() method
+    var itemList = simplist.get();    
+    
+    //get the id for clicked button
+    var id = this.getAttribute('id');
+    
+    //splice out the item
+    itemList.splice(id, 1);
+    
+    //send the list back to storage
+    localStorage.setItem('storedList', JSON.stringify(itemList));
+    
+    //re-render the view
+    simplist.render();
+
+    },
+
   render: function() {
     
+    //get the itemlist via get() method
     var itemList = simplist.get();
     var markup = "";
+    
+    //for each item in the list array save to markup string
+    for (var i = 0; i < itemList.length; i++) {
+      markup += '<div id="' + i + '" class="panel panel-default clearfix">\n' +
+        '<div class="panel-body clearfix">' + itemList[i] + '</div>\n' + 
+          '<div class="panel-footer clearfix"><button class="' +
+          'btn btn-lg btn-danger pull-right del">Delete</button></div></div>\n';
+    }
 
-    itemList.forEach(function(item, index) {
-      markup += '<li id="' + index + '" class="list-group-item list-group-item-warning">' +
-        item.content + '</li>\n';
-    })
-    // for (var i = 0; i < itemList.length; i++) {
-    //   markup += '<li id="' + i + '" class="list-group-item list-group-item-warning">' +
-    //     itemList[i].content + '</li>\n';
-    // }
-
-    document.getElementById('listUl').innerHTML = markup;
+    //change the innerHTML of listcontent to our new markup
+    document.getElementById('listContent').innerHTML = markup;
+    
+    //add eventlisteners to all rendered delete buttons
+    var delBtns = document.getElementsByClassName('del');
+    for (var i = 0; i < delBtns.length; i++) {
+      delBtns[i].addEventListener('click', simplist.del);
+    }
   }
 
 }

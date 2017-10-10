@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8" />
   <meta name="format-detection" content="telephone=no" />
@@ -28,7 +27,7 @@
   <div class="app container-fluid">
     <div class="row">
       <div class="col-xs-12 col-sm-12 center">
-        <h1><span class="app-header glyphicon glyphicon-th-list"></span>&nbsp; SIMPLIST</h1>
+        <h1>SIMPLIST</h1>
       </div>
     </div>
     &nbsp;
@@ -38,7 +37,8 @@
         <div class="form-group">
           <input type="text" class="form-control input-lg" name="text-input"
             id="textField" placeholder="Add an item to list ...">
-          <button id="addItemBtn" class="btn btn-success form-control">Add</button>
+            <br>
+          <button id="addItemBtn" class="btn btn-lg btn-success">Add</button>
         </div> 
       </form>
     
@@ -47,19 +47,13 @@
     <br>
     <div class="row">
       <div class="col-xs-12 col-sm-12">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4>YOUR LIST</h4>
-          </div>
-          <ul id="listUl" class="list-group">
-            <script>simplist.render();</script>
-          </ul>
-        </div>
+      <h4>YOUR LIST</h4>
+        <div id="listContent">
+
+        </div> 
       </div>
     </div>
   </div>
-
-
 
   <script type="text/javascript" src="cordova.js"></script>
 

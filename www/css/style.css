@@ -1,10 +1,9 @@
-.center {
-  text-align: center;
+div.app {
+  max-width:550px;
 }
 
-table td {
-  font-size: 1.7rem;
-  line-height: 1.7rem;
+.center {
+  text-align: center;
 }
 
 .panel-heading h4 {
@@ -12,13 +11,7 @@ table td {
   letter-spacing: .04rem;
 }
 
-ul li {
-  margin-bottom: 5px !important;
-  color: #212121 !important;
-  font-size: 1.1em !important;
-  line-height: 1.5 !important;
-}
-
-ul li.done {
-  text-decoration: line-through!important;
+.panel-body {
+  font-size: 1.3em;
+  background: #f2facd;
 }
